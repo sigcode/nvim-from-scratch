@@ -1,5 +1,5 @@
 vim.cmd([[
 try
-  colorscheme terafox
+  colorscheme darkplus
 endtry
 ]])
