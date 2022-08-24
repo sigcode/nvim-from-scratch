@@ -63,7 +63,7 @@ return packer.startup(function(use)
 	use("ellisonleao/gruvbox.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("savq/melange")
-
+	use("arkav/lualine-lsp-progress")
 	use({
 		"unblevable/quick-scope",
 		config = function()
