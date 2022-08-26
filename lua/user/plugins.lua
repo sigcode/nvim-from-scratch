@@ -65,6 +65,7 @@ return packer.startup(function(use)
 	use("savq/melange")
 	use("arkav/lualine-lsp-progress")
 	use("yong1le/darkplus.nvim")
+	use("rcarriga/nvim-notify")
 	use({
 		"unblevable/quick-scope",
 		config = function()
