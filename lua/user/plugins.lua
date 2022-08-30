@@ -67,6 +67,13 @@ return packer.startup(function(use)
 	use("yong1le/darkplus.nvim")
 	use("rcarriga/nvim-notify")
 	use({
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	})
+	use({
 		"unblevable/quick-scope",
 		config = function()
 			require("user.quickscope")

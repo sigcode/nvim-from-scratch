@@ -20,7 +20,7 @@ require("user.indentline")
 require("user.alpha")
 require("user.whichkey")
 require("user.autocommands")
-
+require("user.refactor")
 function _G.ReloadConfig()
 	for name, _ in pairs(package.loaded) do
 		if name:match("^user") then

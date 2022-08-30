@@ -78,6 +78,30 @@ local opts = {
 	nowait = true, -- use `nowait` when creating keymaps
 }
 
+local optsVisual = {
+	mode = "v", -- Visual mode
+	prefix = "<leader>",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
+local mappingsVisual = {
+	r = {
+		name = "Refactor",
+		e = { "<cmd>lua require('refactoring').refactor('Extract Function')<CR>", "Extract Function" },
+		f = { "<cmd>lua require('refactoring').refactor('Extract Function To File')<CR>", "Extract Function To File" },
+		v = { "<cmd>lua require('refactoring').refactor('Extract Variable')<CR>", "Extract Variable" },
+		i = { "<cmd>lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable" },
+		r = { "<cmd>lua require('refactoring').select_refactor()<CR>", "Select Refactor" },
+	},
+	c = {
+		name = "Comment",
+		b = { "<Plug>(comment_toggle_blockwise_visual)", "Comment Block" },
+		l = { "<Plug>(comment_toggle_linewise_visual)", "Comment Linewise" },
+	},
+}
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
@@ -95,7 +119,12 @@ local mappings = {
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-
+	r = {
+		name = "",
+		b = { "<Cmd>lua require('refactoring').refactor('Extract Block')<CR>", "Extract Block" },
+		f = { "<Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>", "Extract Block To File" },
+		r = { "<Cmd>lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable" },
+	},
 	p = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -190,3 +219,4 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+which_key.register(mappingsVisual, optsVisual)
