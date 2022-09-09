@@ -1,6 +1,7 @@
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
+--require("user.sessions")
 require("user.colorscheme")
 require("user.cmp")
 require("user.lsp")
@@ -21,6 +22,7 @@ require("user.alpha")
 require("user.whichkey")
 require("user.autocommands")
 require("user.refactor")
+require("user.colorizer")
 function _G.ReloadConfig()
 	for name, _ in pairs(package.loaded) do
 		if name:match("^user") then

@@ -65,6 +65,14 @@ return packer.startup(function(use)
 			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
 		end,
 	})
+	use({
+		"ziontee113/color-picker.nvim",
+		config = function()
+			require("color-picker")
+		end,
+	})
+	--use("Shatur/neovim-session-manager")
+	use("NvChad/nvim-colorizer.lua")
 	use("folke/which-key.nvim")
 	use("github/copilot.vim")
 	use("RRethy/vim-illuminate")

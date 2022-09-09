@@ -120,7 +120,7 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	r = {
-		name = "",
+		name = "Refactor",
 		b = { "<Cmd>lua require('refactoring').refactor('Extract Block')<CR>", "Extract Block" },
 		f = { "<Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>", "Extract Block To File" },
 		r = { "<Cmd>lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable" },
